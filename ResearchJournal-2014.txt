@@ -1,0 +1,275 @@
+﻿September 24:
+initial creation
+
+
+Current work-in-progress:
+random fixed connections instead of backprop
+training over multiple GPU
+conditional computing
+SLAM for quadcopter/robot for IFT6085 
+subspace clustering/tensor decomposition for object detection http://arxiv.org/abs/1408.2055
+decomposition of overfeat weights
+
+
+From Y. LeCun NVidia talk
+localization at multiple scales!
+
+
+redo last layer as parzen window for easy classification of arbitrary classes!
+siamese networks for face recognition - metric learning. identical nets make metric small for similar, make metric large for different…
+
+
+KITTI dataset - RGB + LIDAR. Depth prediction
+
+
+September 25:
+Adding ada* and nesterov to mininet before attempts at random backprop to see if results hold
+
+
+model compression via caglar is still gtg… definitely need to look into this much further! Lots of good could come of this…
+
+
+ncurses GUI for train.py/trained models so that it can be run on remote machines to watch training error
+
+
+September 26:
+Hashing trick for conditional computation without conditionals
+core concepts
+
+
+k3(x, x’) = k1(x, x’) + k2(x, x’)
+
+
+If we blank out left half of matrix, then hash with k1, do learning (can you?)
+blank out right half of matrix, then hash with k2, do learning (can you?)
+these two hashed matrices still form a kernel which means we can combine them and use for prediction…?
+
+
+test with perceptron and linear split
+
+
+shown here: http://www.cs.tufts.edu/~roni/Teaching/CLT2008S/LN/lecture18.pdf
+longer: http://www.kernel-machines.org/publications/pdfs/0701907.pdf
+
+
+September 30:
+First meeting with speech recognition group, signed Ubisoft NDA
+Reconstruction troubles
+Talk to Junhyung 
+Talk to David about vocoder
+
+
+ideas - multiresolution for speech generation - one for envelope one for fine grained
+pwvt is multiresolution, might actually make reconstruction easier
+pwvt also has local correlation *but* may not invert from that to “similar” speech...
+talk to Gabriel Synnaeve about speech side
+talk to Sander Dieleman about the same
+
+
+October 7:
+LSTM team - WWAGD?  
+A. Graves paper /technical report on training recurrent nets
+Downsampled speech
+Also look at Roland’s code
+
+
+October 8:
+Model parallelism for multi-gpu training - check out Ilya’s paper!
+Hogwild/asynchronous SGD
+
+
+October 9:
+Aaron showed a nice paper by James and Yoshua - Slow Feature Analysis
+http://papers.nips.cc/paper/3868-slow-decorrelated-features-for-pretraining-complex-cell-like-networks.pdf
+
+
+That plus VAE should get us there! For SLAM application
+
+
+Follow on paper on Incremental Slow Feature Analysis
+http://ijcai.org/papers11/Papers/IJCAI11-229.pdf
+
+
+October 10:
+Reading on RNNs and Slow Feature Analysis
+Start on libgpuarray stuff, need to get in touch with Arnaud
+
+
+October 14:
+sklearn-theano feature extraction for robot navigation
+multi-gpu / model parallelism
+CPU and GPU memory and performance profiles
+ set OMP_NUM_THREADS
+October 17:
+Sinewaves + LPC code from MATLAB to Python - DONE
+
+
+November 1:
+L-infinity pooling
+
+
+November 15:
+Bessel function wrapper
+
+
+November 20:
+Overfit network on LPC
+
+
+December 1:
+Rank one cholesky update for Laurent Kalman filter style
+
+
+December 5:
+RNN to replace pooling in conv nets for no information loss
+
+
+December 11:
+critic nets
+rnn on last layer to avoid having to retrain softmax
+
+
+December 12:
+Fix incremental ZCA to use svd(X) rather than X.T,X
+randomized solver for IncPCA sklearn
+changepoint detection using IncPCA -  check out tweet
+speech recognition - output is HMM state then viterbi decode. try antoine teacher/student to compress + dark knowledge.
+approx convolution using undersampled/random filters aka compressed sensing
+teacher student reduction in sklearn-theano
+
+
+December 13:
+Use autoencoders/VAE to learn easy controls for manipulating and exploring complex data
+use K-means vector quantization with discrete HMM rather than gaussian . maybe integrate together?
+attention mechanism for optimized clustering/tree search
+
+
+December 14:
+Use Cho’s networks + CTC to start doing Handwritter for reals
+Work through backlog for sklearn-theano and add finetuning, simple models, and rnn
+
+
+December 15:
+Maybe make the blog post be speech synthesis, rather than speech recognition?
+
+
+December 29:
+Kmeans instead of GMM for synthesis
+PCA/Tensor/Kmeans for compressing output sequence for handwriting prediction so that CTC will work?
+Spline approximation for sequence of coordinates?
+KNN for synthesis?
+Experiment with hinge cost for speech tasks
+hinge cost replacing softmax in CTC?
+maxout for feedforward part of RNN
+
+
+December 30:
+Train RNN to embed images into sound?
+Learning technique: start with all data, once learning begins drop way back to one or two examples, then gradually add samples back in a few at a time.
+
+
+December 31:
+Mixture of student-T clipped gaussian instead of mixture of gaussians for cost in generative RNN
+
+
+January 8:
+Basic convnet to get above the 80% baseline
+Teacher student training is an option
+IncrementalZCA - TODO
+Parzen or KNN classifier for semi-supervised
+Convolutional Kernel Network - might be good with ZCA
+Yann LeCun parzen window for “fast classifier”
+Bayesian optimization for cats and dogs using “random embeddings Bayesian optimization
+
+
+IFT6266 TODO:
+basic conv net and get above 80%
+add ZCA
+Deep Scattering Network
+Deep C Net
+GoogleNet
+Convolutional Kernel Network
+Disjunctive Normal Networks
+Conv-Deconv VAE
+
+
+January 9:
+For rare or uncommon sounds/words/patterns (verified by validation set?) use text to speech to synthesize data to fill in gaps
+
+
+January 10:
+Label propagation cost function? For semi supervised
+Gaussian or kmeans decision tree
+NIST evaluations of automatic speech recognition 
+
+
+February 3:
+Polyphase filterbank for convnet computation
+A neural network attention model which finds Waldo
+
+
+February 4:
+Single decision tree trained with MCMC for fast, fast classification http://www.reddit.com/r/MachineLearning/comments/2ur5w4/question_when_making_a_decision_tree_how_do_you/
+Robust PCA convnet for developing an attention mechanism
+Low rank updates for optimization using Woodbury identity
+Grad SVD(X) https://hal.inria.fr/inria-00072686/document . Possible uses include cluster costs or PCA tracking in eigenspace using gradients
+
+
+February 11:
+Decomposition of confusion matrix as cost - cost wants to diagonalize confusion matrix
+Decimation pooling based on conversation from Roland
+socratic net - train on cifar10
+
+
+February 15:
+Amjad hdf5
+Yann socratic learning
+ubi dataset
+Kratarth rnn-dbn
+cifar10 convnet
+readings and assignment for roland
+
+
+February 16:
+Atari in pure theano + emulator glue then maybe RNN language model
+DRAW implementation
+Train on LFW to show samples to Vincent
+
+
+February 20:
+Ensemble of VAE - the VAE collective
+
+
+March 10:
+convnet for panoramic stitching. Would be like the conv net which plays go, and would also be easy to generate arbitrary segmentations from a dataset eg. ImageNet
+ 
+March 11:
+Feedback alignment r2. Especially getting a nice framework using “givens” in Theano (givens: param.T:fixed_B)
+
+
+March 24:
+Find datasets for {onomatopoeia, single word speech} online
+
+
+April 21:
+Variational neural networks learn mean and sigma for each parameter
+
+
+May 22:
+ARSS drawing spectrograms - learn to cleanup drawings using similar procedure as ARSS
+Use midi -> wav converters to learn to cleanup data, along with learning mapping from jpg compressed spectrogram -> original
+
+
+Encdec RNN for speech by using kmeans codebook. could also do text -> speech by using the same architecture.
+
+
+May 24:
+Use pyklatt repo for making infinite training data for text -> speech. Show conditional training then see if finetuning on different data can change the sound generated.
+
+
+May 31:
+Outlier detection with RNN-VAE.Alternatively, could you use a trained attention model for sequences to determine "unlikely" events given surrounding context?
+
+
+June 2:
+Use generative RNN with conditional information to do logistics / likely path routing.
