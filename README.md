@@ -496,6 +496,7 @@ list=PLyIFQr1wryPLLpctn9JLqZzUiDN1vnzYu)
 
 [NINA - Sleepwalking](https://www.youtube.com/watch?v=rPbrR6b6ZYs)
 
+[Robert Parker - End of the Night](https://www.youtube.com/watch?v=e9bmkRsU4IQ)
 
 
 Working through this list.... http://www.jazzwisemagazine.com/pages/jazz-album-reviews/11585-the-100-jazz-albums-that-shook-
