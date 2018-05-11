@@ -500,6 +500,8 @@ list=PLyIFQr1wryPLLpctn9JLqZzUiDN1vnzYu)
 
 [Waveshaper - Lost Shapes](https://www.youtube.com/watch?v=058X7JFivng)
 
+[Occam's Laser - CRUCIFIXATION](https://www.youtube.com/watch?v=sufmhobElAU&index=2&list=PL_MHjKxnHz1tn-a-tWiHb1_yZ05AFwshG)
+
 
 Working through this list.... http://www.jazzwisemagazine.com/pages/jazz-album-reviews/11585-the-100-jazz-albums-that-shook-
 the-world?showall=
