@@ -498,6 +498,8 @@ list=PLyIFQr1wryPLLpctn9JLqZzUiDN1vnzYu)
 
 [Robert Parker - End of the Night](https://www.youtube.com/watch?v=e9bmkRsU4IQ)
 
+[Waveshaper - Lost Shapes](https://www.youtube.com/watch?v=058X7JFivng)
+
 
 Working through this list.... http://www.jazzwisemagazine.com/pages/jazz-album-reviews/11585-the-100-jazz-albums-that-shook-
 the-world?showall=
