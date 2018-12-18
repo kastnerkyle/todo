@@ -504,6 +504,8 @@ list=PLyIFQr1wryPLLpctn9JLqZzUiDN1vnzYu)
 
 [Master Boot Record - Interrupt Request](https://www.youtube.com/watch?v=rvYqjBYuq-4)
 
+[DEADLIFE - Variations on the Resolve](https://www.youtube.com/watch?v=8e3MeuMWW5U)
+
 Working through this list.... http://www.jazzwisemagazine.com/pages/jazz-album-reviews/11585-the-100-jazz-albums-that-shook-
 the-world?showall=
 
