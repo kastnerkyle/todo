@@ -506,6 +506,8 @@ list=PLyIFQr1wryPLLpctn9JLqZzUiDN1vnzYu)
 
 [DEADLIFE - Variations on the Resolve](https://www.youtube.com/watch?v=8e3MeuMWW5U)
 
+[SHIKIMO - Umbra Complex](https://www.youtube.com/watch?v=qucrYEWlEjw)
+
 Working through this list.... http://www.jazzwisemagazine.com/pages/jazz-album-reviews/11585-the-100-jazz-albums-that-shook-
 the-world?showall=
 
